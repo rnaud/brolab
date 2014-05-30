@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
+/* fonts */
 @font-face {
     font-family: 'baron_neueblack';
     src: url('../fonts/../fonts/baron_neue_black-webfont.eot');
@@ -46,14 +45,18 @@
 }
 
 html, body {padding: 0; margin: 0; position: relative; width: 100%; height: 100%;}
+body {font:14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:300;}
 
-body {
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight:300;
-}
-
+/* generic */
+* {box-sizing: border-box;}
+h1, h2, h3, h4, .big {font-family: 'baron_neueregular'; text-transform: uppercase;}
+h1 {font-size: 54px; margin:15px 0;}
 ul {margin: 0; padding: 0; list-style: none;}
+.big {font-size: 60px; line-height: 60px; margin-bottom: 60px;}
+.white {color: white;}
 
+
+/* tabs */
 .tab-header {with: 30%; float: left;}
 .tab-header li {cursor: pointer; padding: 50px; border: 1px solid black; font-family: 'baron_neueregular';  font-size: 30px;}
 .tab-header li:hover {background-color: rgba(0,0,0,.1)}
@@ -62,13 +65,7 @@ ul {margin: 0; padding: 0; list-style: none;}
 .tabs-container div {display: none;}
 .tabs-container div.active {display: block;}
 
-h1, h2, h3, h4, .big {font-family: 'baron_neueregular'; text-transform: uppercase;}
-h1 {font-size: 54px; margin:15px 0;}
-.big {font-size: 60px; line-height: 60px; margin-bottom: 60px;}
-.white {color: white;}
-
-* {box-sizing: border-box;}
-
+/* sections */
 section {position: relative; width: 100%; height: 100%; background-size: cover; background-position: center; overflow: auto;}
 
 section#home {background-image: url(../images/bg-home.jpg);}
@@ -81,7 +78,3 @@ section#home .logo span {font-family: 'source_sans_proregular'; text-transform: 
 
 
 .content {max-width: 1024px; margin: 150px auto;}
-
-
-
-
