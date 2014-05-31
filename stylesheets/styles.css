@@ -58,12 +58,21 @@ ul {margin: 0; padding: 0; list-style: none;}
 
 /* tabs */
 .tab-header {with: 30%; float: left;}
-.tab-header li {cursor: pointer; padding: 50px; border: 1px solid black; font-family: 'baron_neueregular';  font-size: 30px;}
+.tab-header li {
+	transition: all 0.5s ease;
+	cursor: pointer; padding: 20px 50px; border: 1px solid black; border-bottom: 0; font-family: 'baron_neueregular';  font-size: 30px;}
+
+.tab-header li#quentin {border-bottom: 1px solid black}
+.tab-header li#bro {margin-top:50px;border-bottom: 1px solid black}
 .tab-header li:hover {background-color: rgba(0,0,0,.1)}
 
 .tabs-container {float: left; width: 60%; margin-left: 10%;}
 .tabs-container div {display: none;}
 .tabs-container div.active {display: block;}
+
+.tabs-container img {float:left;}
+.tabs-container h2 {float:left; margin:0 50px;}
+
 
 /* sections */
 section {position: relative; width: 100%; height: 100%; background-size: cover; background-position: center; overflow: auto;}
