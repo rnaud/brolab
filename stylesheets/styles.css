@@ -45,7 +45,7 @@
 }
 
 html, body {padding: 0; margin: 0; position: relative; width: 100%; height: 100%;}
-body {font:14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:300;}
+body {font:14px/1.5 'source_sans_proregular', Helvetica, Arial, sans-serif; font-weight:300;}
 
 /* generic */
 * {box-sizing: border-box;}
@@ -55,9 +55,14 @@ ul {margin: 0; padding: 0; list-style: none;}
 .big {font-size: 60px; line-height: 60px; margin-bottom: 60px;}
 .white {color: white;}
 
+/*header*/
+header {position: fixed; z-index: 1; top:20px;}
+header li {display: inline-block; margin:0; width: 150px; height:50px; line-height:50px; text-align:center;border:1px solid #333;
+text-transform: uppercase; font-size: 12px;}
+
 
 /* tabs */
-.tab-header {with: 30%; float: left;}
+.tab-header {width: 30%; float: left;}
 .tab-header li {
 	transition: all 0.5s ease;
 	cursor: pointer; padding: 20px 50px; border: 1px solid black; border-bottom: 0; font-family: 'baron_neueregular';  font-size: 30px;}
