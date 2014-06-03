@@ -97,7 +97,7 @@ section#home .logo span {font-family: 'source_sans_proregular'; text-transform: 
 /* work */
 
 
-#work li {width: 300px; background: #333; height: 200px; float:left; transition: all 0.5s ease;
+#work li {width: 33%; background: #333; height: 200px; float:left; transition: all 0.5s ease;
 }
 #work li:hover {background-color:rgba(0,0,0,.1);}
 
