@@ -56,10 +56,10 @@ ul {margin: 0; padding: 0; list-style: none;}
 .white {color: white;}
 
 /*header*/
-header {position: fixed; z-index: 1; top:20px;}
-header li {display: inline-block; margin:0; width: 150px; height:50px; line-height:50px; text-align:center;border:1px solid #333;
+ul.menu {position: absolute; z-index: 100; top:20px; right: 100px;}
+ul.menu li {display: inline-block; margin:0; width: 150px; height:50px; line-height:50px; text-align:center;border:1px solid #333; cursor: pointer;
 text-transform: uppercase; font-size: 12px;}
-
+ul.menu li.active {background-color: rgba(0,0,0,.3)}
 
 /* tabs */
 .tab-header {width: 30%; float: left;}
@@ -72,33 +72,59 @@ text-transform: uppercase; font-size: 12px;}
 .tab-header li:hover {background-color: rgba(0,0,0,.1)}
 
 .tabs-container {float: left; width: 60%; margin-left: 10%;}
-.tabs-container div {display: none;}
-.tabs-container div.active {display: block;}
+.tabs-container div {position: absolute; width: 100%; min-height: 200px;}
 
 .tabs-container img {float:left;}
 .tabs-container h2 {float:left; margin:0 50px;}
 
 
 /* sections */
-section {position: relative; width: 100%; height: 100%; background-size: cover; background-position: center; overflow: auto;}
+section {position: relative; width: 100%; height: 100%; overflow: hidden; min-height: 500px;}
 
-section#home {background-image: url(../images/bg-home.jpg);}
-section#work {background-image: url(../images/bg-work.jpg);}
-section#bros {background-image: url(../images/bg-bros.jpg);}
-section#contact {background-image: url(../images/bg-contact.jpg);}
+section .bg {position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center;}
 
+section#home .bg {background-image: url(../images/bg-home.jpg);}
+section#work .bg {background-image: url(../images/bg-work.jpg);}
+section#bros .bg {background-image: url(../images/bg-bros.jpg);}
+section#contact .bg {background-image: url(../images/bg-contact.jpg);}
+
+section#home .content {height: 100%;}
 section#home .logo {position: absolute; left: 50%; top: 50%; margin-left: -100px; margin-top: -130px; text-align: center; line-height: 15px; width: 200px;}
+
+section#home .logo img {-webkit-animation: spin 10s infinite linear;}
+
 section#home .logo span {font-family: 'source_sans_proregular'; text-transform: uppercase; font-size: 14px; letter-spacing: -1px}
 
 
-.content {max-width: 1024px; margin: 150px auto;}
+.content {max-width: 1024px; margin: 0 auto; padding-top: 150px; position: relative; z-index: 10;}
 
 
 /* work */
 
 
-#work li {width: 33%; background: #333; height: 200px; float:left; transition: all 0.5s ease;
+.portfolio li {width: 33%; height: 200px; float:left; transition: all 0.5s ease;
+    background-color:rgba(0,0,0,.1);
 }
-#work li:hover {background-color:rgba(0,0,0,.1);}
+.portfolio li:hover {background: #333;}
 
-#work .hover {display: none}
+
+
+.hide {
+  transition: all .3s; -webkit-transition: all .3s ease-out;
+  opacity: 0;
+  -ms-transform: scale(.8) translateY(-100px); /* IE 9 */
+  -webkit-transform: scale(.8) translateY(-100px); /* Chrome, Safari, Opera */
+  transform: scale(.8) translateY(-100px);
+}
+
+.appeared,
+.hide.appeared {opacity: 1;
+  -ms-transform: scale(1) translateY(0); /* IE 9 */
+  -webkit-transform: scale(1) translateY(0); /* Chrome, Safari, Opera */
+  transform: scale(1) translateY(0);
+}
+
+@-webkit-keyframes spin {
+    0%   {-webkit-transform: rotate(0deg)}
+    100% {-webkit-transform: rotate(360deg)}
+}

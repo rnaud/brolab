@@ -14,25 +14,28 @@
   </head>
   <body>
 
-    <header>
-      <ul>
-        <li>selected work</li>
-        <li>bro's</li>
-        <li>contact</li>
-      </ul>
-    </header>
-
-
     <section id="home">
+      <div class="bg hide"></div>
+      <div class="content">
         <div class="logo">
-        <img src="images/logo.png" alt="">
-        <h1>brolab</h1><span>paris - san francisco - black rock</span>
+          <img src="images/logo.png" alt="" class="hide">
+          <div class="title hide">
+            <h1>brolab</h1><span>paris - san francisco - black rock</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="work">
+      <div class="bg hide"></div>
+      <ul class="menu">
+        <li data-target="work" class="active">selected work</li>
+        <li data-target="bros">bro's</li>
+        <li data-target="contact">contact</li>
+      </ul>
+
       <div class="content">
-        <ul>
+        <ul class="portfolio">
           <li id="more"><div class="hover"><img src="#"><a href="#">www.more-festival.com</a></div></li>
           <li id="cyclez"><div class="hover"><img src="#"><a href="#">www.cyclez.fr</a></div></li>
           <li id="onefeat"><div class="hover"><img src="#"><a href="#">www.onefeat.com</a></div></li>
@@ -46,6 +49,13 @@
 
 
     <section id="bros">
+      <div class="bg hide"></div>
+      <ul class="menu">
+        <li data-target="work">selected work</li>
+        <li data-target="bros" class="active">bro's</li>
+        <li data-target="contact">contact</li>
+      </ul>
+
       <div class="content">
         <ul class="tab-header">
           <li data-target="arnaud">> Arnaud</li>
@@ -56,22 +66,22 @@
 
       <div class="tabs-container">
 
-        <div class="arnaud active">         
+        <div class="arnaud hide appeared">
           <img src="images/arnaud.png">
           <h2>> Php<br>> ruby<br>> ios<br>&<br>>mario kart</h2>
-        </div>     
+        </div>
 
-        <div class="ivan">
+        <div class="ivan hide">
           <img src="images/ivan.png">
           <h2>> HTML5<br>> CSS3<br>> Js<br>&<br>> t-bones</h2>
         </div>
-        
-        <div class="quentin">        
+
+        <div class="quentin hide">
           <img src="images/quentin.png">
            <h2>> UX<br>> Design<br>> Creative<br>&<br>> Plumbing</h2>
         </div>
 
-        <div class="bros">        
+        <div class="bros hide">
           <img src="images/bro.png">
           <h2>> Copyrighters<br>> Art Director<br>> Strategist<br>&<br>> </h2>
         </div>
@@ -83,6 +93,13 @@
 
 
     <section id="contact">
+      <div class="bg hide"></div>
+      <ul class="menu">
+        <li data-target="work">selected work</li>
+        <li data-target="bros">bro's</li>
+        <li data-target="contact" class="active">contact</li>
+      </ul>
+
       <div class="content">
         <div class="big">Wanna hang out with the bros?</div>
         <div class="big white">
@@ -92,7 +109,7 @@
       </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="javascripts/script.js"></script>
   </body>
 </html>
