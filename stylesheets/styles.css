@@ -56,7 +56,7 @@ ul {margin: 0; padding: 0; list-style: none;}
 .white {color: white;}
 
 /*header*/
-ul.menu {position: absolute; z-index: 100; top:20px; right: 100px;}
+ul.menu {position: absolute; z-index: 100; top:20px; right: 160px;}
 ul.menu li {display: inline-block; margin:0; width: 150px; height:50px; line-height:50px; text-align:center;border:1px solid #333; cursor: pointer;
 text-transform: uppercase; font-size: 12px;}
 ul.menu li.active {background-color: rgba(0,0,0,.3)}
@@ -102,10 +102,84 @@ section#home .logo span {font-family: 'source_sans_proregular'; text-transform: 
 /* work */
 
 
-.portfolio li {width: 33%; height: 200px; float:left; transition: all 0.5s ease;
+/* --- Container configuration ---------------------------------------------------------- */
+.viewport {
+    float: left;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 33%;
+}
+
+/* This is so that the 2nd thumbnail in each row fits snugly. You will want to add a similar
+   class to the last thumbnail in each row to get rid of the margin-right. */
+.no-margin {
+    margin-right: 0;
+}
+
+/* --- Link configuration that contains the image and label ----------------------------- */
+.viewport a {
+    display: block;
+    position: relative;
+}
+
+.viewport a img {
+    height: 332px;
+    left: -20px;
+    position: relative;
+    top: -20px;
+    width: 500px;
+}
+
+/* --- Label configuration -------------------------------------------------------------- */
+.viewport a span {
+    display: none;
+    font-size: 15px; text-transform: uppercase;
+    height: 100%;
+    padding-top: 80px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    z-index: 100;
+}
+
+/* --- Dark hover background ------------------------------------------------------------ */
+.dark-background {
+    background-color: rgba(15, 15, 15, 0.6);
+    color: #fff;
+    text-shadow: #000 0px 0px 20px;
+}
+    .dark-background em {
+        color: #ccc;
+    }
+
+/**
+ * You could create multiple hover background classes for different looks depending on the
+ * image type. Use your imagination!
+ */
+
+/*.portfolio li {width: 33%; height: 200px; float:left; transition: all 0.5s ease;
     background-color:rgba(0,0,0,.1);
 }
-.portfolio li:hover {background: #333;}
+
+.blog {
+    height: 200px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.blog:hover {
+    cursor: pointer;
+    height:475px;
+    width: 350px;
+}
+
+
+.portfolio li:hover {background: #333;}*/
 
 
 
