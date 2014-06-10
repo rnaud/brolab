@@ -49,8 +49,8 @@ body {font:14px/1.5 'source_sans_proregular', Helvetica, Arial, sans-serif; font
 
 /* generic */
 * {box-sizing: border-box;}
-h1, h2, h3, h4, .big {font-family: 'baron_neueregular'; text-transform: uppercase;}
-h1 {font-size: 54px; margin:15px 0;}
+h1, h2, h3, h4, .big {font-family: 'baron_neueregular';}
+h1 {font-size: 54px; margin:15px 0;text-transform: uppercase;}
 ul {margin: 0; padding: 0; list-style: none;}
 .big {font-size: 60px; line-height: 60px; margin-bottom: 60px;}
 .white {color: white;}
@@ -133,7 +133,7 @@ section#home .logo span {font-family: 'source_sans_proregular'; text-transform: 
     display: none;
     font-size: 15px; text-transform: uppercase;
     height: 100%;
-    padding-top: 80px;
+    padding-top: 90px;
     position: absolute;
     text-align: center;
     text-decoration: none;
@@ -170,4 +170,14 @@ section#home .logo span {font-family: 'source_sans_proregular'; text-transform: 
 @-webkit-keyframes spin {
     0%   {-webkit-transform: rotate(0deg)}
     100% {-webkit-transform: rotate(360deg)}
+}
+
+
+/* responsive */
+
+/* Responsive Mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+#work, #bros, #contact {display: none}
+
 }
