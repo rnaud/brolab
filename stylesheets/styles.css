@@ -122,11 +122,11 @@ section#home .logo span {font-family: 'source_sans_proregular'; text-transform: 
 }
 
 .viewport a img {
-    height: 332px;
+    height: 200px;
     left: -20px;
     position: relative;
     top: -20px;
-    width: 500px;
+    width: 330px;
 }
 
 .viewport a span {
