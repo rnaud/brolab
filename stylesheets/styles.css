@@ -56,10 +56,12 @@ ul {margin: 0; padding: 0; list-style: none;}
 .white {color: white;}
 
 /*header*/
-ul.menu {position: absolute; z-index: 100; top:20px; right: 160px;}
+ul.menu {position: absolute; z-index: 100; top:20px; right: 173px;}
 ul.menu li {display: inline-block; margin:0; width: 150px; height:50px; line-height:50px; text-align:center;border:1px solid #333; cursor: pointer;
 text-transform: uppercase; font-size: 12px;}
 ul.menu li.active {background-color: rgba(0,0,0,.3)}
+ul.menu li:hover {background-color: rgba(0,0,0,.3);transition: all 0.5s ease;}
+
 
 /* tabs */
 .tab-header {width: 30%; float: left;}
